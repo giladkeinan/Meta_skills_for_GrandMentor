@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>מיומנויות קטנות לחיים גדולים</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="פעילויות של סבא וסבתא עם הנכדים, מאורגנות לפי 11 קטגוריות של מטא־מיומנויות, עם פתיחה, עשייה והתבוננות">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@500;700;900&family=IBM+Plex+Sans+Hebrew:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+</head>
+<body>
+<style>
+:root{
+ --bg:#f7f1e6;--sheet:#fffcf6;--ink:#2a2118;--muted:#6c5f50;--line:#e5d9c6;--soft:#f2e9da;
+ --accent:#8a5a14;--accent-soft:#f3e6cc;--accent-ink:#fffaf0;--joint:#2e6b5a;--solo:#7a4b8c;--warn:#a2550f;
+ --f-display:"Frank Ruhl Libre","David",serif;--f-body:"IBM Plex Sans Hebrew","Assistant","Arial",sans-serif;--f-mono:"IBM Plex Mono",ui-monospace,monospace;--r:12px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+ --bg:#15110c;--sheet:#1d1812;--ink:#f1e8da;--muted:#b3a58f;--line:#3a3127;--soft:#2a231b;
+ --accent:#e0b45c;--accent-soft:#3a2e18;--accent-ink:#1a1408;--joint:#6cc3a8;--solo:#c79ad8;--warn:#f0a35c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#15110c;--sheet:#1d1812;--ink:#f1e8da;--muted:#b3a58f;--line:#3a3127;--soft:#2a231b;
+ --accent:#e0b45c;--accent-soft:#3a2e18;--accent-ink:#1a1408;--joint:#6cc3a8;--solo:#c79ad8;--warn:#f0a35c;color-scheme:dark}
+*{box-sizing:border-box}
+body{direction:rtl;margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16.5px;line-height:1.7}
+a{color:var(--accent)}
+.wrap{display:grid;grid-template-columns:280px minmax(0,1fr);gap:24px;max-width:1240px;margin:0 auto;padding:22px 16px}
+@media (max-width:880px){.wrap{grid-template-columns:minmax(0,1fr);gap:14px;padding:12px}}
+nav.index{position:sticky;top:16px;align-self:start;max-height:calc(100vh - 32px);overflow:auto;background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+@media (max-width:880px){nav.index{position:static;max-height:none}}
+.brand{font-family:var(--f-display);font-weight:900;font-size:1.3rem;margin:0;line-height:1.2}
+.brand-sub{margin:4px 0 12px;font-size:.84rem;color:var(--muted)}
+.btn{display:inline-flex;flex-direction:column;align-items:flex-start;gap:2px;font:inherit;font-size:.92rem;border:1px solid var(--line);border-radius:10px;padding:8px 14px;background:var(--sheet);color:var(--ink);text-decoration:none;cursor:pointer}
+.btn:hover{border-color:var(--accent)}
+.btn small{font-size:.74rem;color:var(--muted)}
+.btn.navtoggle{display:none;width:100%;align-items:center}
+@media (max-width:880px){.btn.navtoggle{display:flex}.navlist.closed{display:none}}
+.navlist{list-style:none;margin:0;padding:0}
+.navlist a{display:flex;gap:8px;align-items:baseline;padding:5px 8px;border-radius:8px;text-decoration:none;color:var(--ink);font-size:.92rem}
+.navlist a:hover{background:var(--soft)}
+.navlist a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
+.navlist .code{font-family:var(--f-mono);font-size:.74rem;color:var(--muted);min-width:1.6em}
+.navlist a[aria-current="page"] .code{color:inherit}
+.navgroup{font-size:.74rem;font-weight:700;color:var(--muted);margin:12px 8px 4px;letter-spacing:.04em}
+main{background:var(--sheet);border:1px solid var(--line);border-radius:var(--r);padding:30px 36px 26px;min-width:0}
+main:focus{outline:none}
+@media (max-width:560px){main{padding:20px 16px}}
+.eyebrow{font-size:.8rem;font-weight:700;color:var(--accent);margin:0 0 6px;letter-spacing:.04em}
+h1,h2,h3{font-family:var(--f-display);line-height:1.2;margin:0;text-wrap:balance}
+h1{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:900}
+h2{font-size:1.4rem;margin:28px 0 10px}
+h3{font-size:1.1rem}
+.lead{font-size:1.1rem;color:var(--muted);max-width:62ch}
+p{max-width:70ch}
+.tagline{font-family:var(--f-display);font-size:1.35rem;font-weight:700;color:var(--accent);margin:6px 0 0}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:900px){.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.grid2,.grid3{grid-template-columns:minmax(0,1fr)}}
+.box{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;min-width:0;background:var(--sheet)}
+.box .k{font-size:.78rem;font-weight:700;color:var(--muted);letter-spacing:.03em}
+.box p{margin:4px 0 0}
+.box.q{border-color:var(--accent);background:var(--accent-soft)}
+.box.q p{font-family:var(--f-display);font-size:1.2rem;font-weight:700}
+.cat{display:flex;flex-direction:column;gap:6px;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;text-decoration:none;color:var(--ink);background:var(--sheet);min-width:0}
+.cat:hover{border-color:var(--accent)}
+.cat .num{font-family:var(--f-display);font-weight:900;font-size:1.6rem;color:var(--accent);line-height:1}
+.cat .nm{font-weight:700;font-size:1.04rem}
+.cat .tg{font-size:.9rem;color:var(--muted)}
+.cat .meta{font-size:.78rem;color:var(--muted)}
+.badge{display:inline-block;font-size:.74rem;font-weight:700;padding:1px 9px;border-radius:99px;border:1px solid currentColor;white-space:nowrap}
+.badge.j{color:var(--joint)} .badge.s{color:var(--solo)} .badge.f{color:var(--accent)}
+.act{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;align-items:center;border:1px solid var(--line);border-radius:var(--r);padding:12px 16px;text-decoration:none;color:var(--ink);background:var(--sheet);margin-top:10px}
+.act:hover{border-color:var(--accent)}
+.act .nm{font-weight:700}
+.act .sub{grid-column:1/-1;font-size:.88rem;color:var(--muted)}
+.act .go{color:var(--accent);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.chip{font:inherit;font-size:.84rem;border:1px solid var(--line);border-radius:99px;padding:3px 12px;background:var(--sheet);color:var(--ink);cursor:pointer;text-decoration:none}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.vals{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.vals span{font-size:.86rem;background:var(--soft);border-radius:8px;padding:3px 10px}
+.stages{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.stage{display:grid;grid-template-columns:52px minmax(0,1fr);gap:14px;border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.stage .n{width:44px;height:44px;border-radius:50%;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-family:var(--f-display);font-weight:900;font-size:1.3rem}
+.stage h3{margin-bottom:4px}
+.stage .hint{font-size:.82rem;color:var(--muted);margin:0 0 6px}
+.stage ol{margin:6px 0 0;padding-inline-start:20px}
+.stage ol li{margin:4px 0}
+.stage ul.rq{list-style:none;padding:0;margin:6px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}
+@media (max-width:560px){.stage{grid-template-columns:minmax(0,1fr)}.stage ul.rq{grid-template-columns:minmax(0,1fr)}}
+.stage ul.rq li{background:var(--soft);border-radius:8px;padding:6px 10px;font-weight:600}
+.stage .own{margin-top:8px;border-right:3px solid var(--accent);padding:4px 12px;font-family:var(--f-display);font-weight:700;font-size:1.08rem}
+.facts{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:10px;font-size:.9rem;color:var(--muted)}
+.facts b{color:var(--ink)}
+.ages{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:8px}
+@media (max-width:640px){.ages{grid-template-columns:minmax(0,1fr)}}
+.ages div{border:1px solid var(--line);border-radius:var(--r);padding:10px 14px}
+.ages div.on{border-color:var(--accent);background:var(--accent-soft)}
+.ages div.off{opacity:.5}
+.ages b{display:block;font-family:var(--f-display);font-size:1.1rem}
+.safe{margin-top:12px;border-right:4px solid var(--warn);background:color-mix(in srgb,var(--warn) 9%,var(--sheet));padding:8px 14px;border-radius:0 8px 8px 0}
+.notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+@media (max-width:640px){.notes{grid-template-columns:minmax(0,1fr)}}
+.notes label{font-weight:700;font-size:.92rem}
+.notes textarea{width:100%;min-height:90px;margin-top:4px;font:inherit;font-size:.95rem;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);resize:vertical}
+.notes .saved{font-size:.78rem;color:var(--muted)}
+.pager{display:flex;justify-content:space-between;gap:10px;margin-top:30px;padding-top:16px;border-top:1px solid var(--line);flex-wrap:wrap}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:10px}
+.flow span{border:1px solid var(--accent);color:var(--accent);border-radius:99px;padding:4px 14px;font-weight:700}
+.flow i{font-style:normal;color:var(--muted)}
+.found{border:1px dashed var(--accent);border-radius:var(--r);padding:14px 18px;margin-top:16px;background:color-mix(in srgb,var(--accent-soft) 50%,var(--sheet))}
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.toolbar .lbl{font-size:.85rem;font-weight:700;color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:.92rem}
+th,td{border-bottom:1px solid var(--line);padding:7px 10px;text-align:right;vertical-align:top}
+th{font-size:.8rem;color:var(--muted)}
+.tablewrap{overflow-x:auto}
+footer{text-align:center;font-size:.82rem;color:var(--muted);padding:8px 16px 24px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:6px}
+@media print{nav.index,footer,.pager,.noprint,.btn{display:none!important}.wrap{display:block;padding:0}main{border:0;padding:0}body{background:#fff;color:#000;font-size:12pt}.stage,.box,.ages div{break-inside:avoid}}
+</style>
+
+<div class="wrap">
+ <nav class="index" aria-label="ניווט">
+  <p class="brand">מיומנויות קטנות לחיים גדולים</p>
+  <p class="brand-sub">GrandMentor · פעילויות של סבא וסבתא עם הנכדים, לפי מטא־מיומנויות</p>
+  <button class="btn navtoggle" id="navtoggle" type="button" aria-expanded="false" aria-controls="navlist">הצג את תוכן העניינים</button>
+  <ul class="navlist closed" id="navlist"></ul>
+ </nav>
+ <main id="view" tabindex="-1"></main>
+</div>
+<footer>GrandMentor · חניכה בין־דורית. הגילאים הם הצעה בלבד. בכל פעילות עם כלים, אש או חשמל יש להתאים את ההשגחה לגיל וליכולת.</footer>
+
+<script>
+const CATS=[
+{id:'hands',n:'ידיים חכמות וכוננות',tag:'יד פנויה היא יד מוכנה',
+ idea:'שליטה בגוף, בכלים ובמרחב. כלי שסיים את תפקידו חוזר מיד למקומו, ויד אחת נשארת פנויה ומוכנה לפעולה הבאה.',
+ skill:'הפרדת תפקידים בין הידיים: יד אחת מייצבת והשנייה פועלת. שחרור של מה שאינו בשימוש, ושמירת עתודה לפעולה הבאה.',
+ q:'איפה היד השנייה שלך עכשיו, ולמה היא שם?',
+ ins:'מה שמחזיקים בלי צורך תופס את המקום של מה שעוד יידרש.',
+ gp:'לשים לב להרגלי תנועה שנצברו במשך שנים, ולראות אותם מחדש דרך העיניים של הנכד/ה.',
+ val:['מוטוריקה עדינה ותיאום','בטיחות ומניעת תקלות קטנות','ניהול משאבים','מוכנות לפעולה הבאה'],
+ life:'שולחן העבודה, הזיכרון, הזמן ותשומת הלב: גם בהם כדאי "לפנות את היד" ממה שכבר לא נחוץ.',
+ src:['Gemini','ChatGPT','Claude','Perplexity','Grok','DeepSeek'],founder:1},
+{id:'slow',n:'האטה והתבוננות',tag:'לאט רואים יותר',
+ idea:'מעבר מפעולה אוטומטית ונמהרת לפעולה מודעת: עוצרים, מסתכלים, ורק אז ממשיכים.',
+ skill:'קשב מכוון, השהיית התגובה, והבחנה בפרטים ובשינויים קטנים.',
+ q:'מה ראית עכשיו שלא ראית במבט הראשון?',
+ ins:'המהירות חוסכת זמן, וההאטה חוסכת טעויות. החוכמה היא לדעת מתי כל אחת מהן.',
+ gp:'הנכד/ה רואה פרטים שהעין המנוסה כבר למדה לדלג עליהם.',
+ val:['קשב וריכוז','סקרנות מדעית','שקט פנימי וויסות','דיוק'],
+ life:'קריאת הוראות, שאלה במבחן, היכרות עם אדם חדש: בכולם מבט שני מגלה יותר.',
+ src:['Gemini','ChatGPT','Claude','Perplexity','Grok','DeepSeek'],founder:2},
+{id:'reflect',n:'חשיבה על הפעולה והפקת לקחים',tag:'עוצרים, חושבים, לומדים',
+ idea:'לא רק לעשות, אלא לחשוב על מה שעשינו: מה עבד, מה לא, ומה נשנה בפעם הבאה.',
+ skill:'חשיבה על החשיבה (מטא־קוגניציה): לבחון החלטה, לנסח לקח במילים שלך, וליישם אותו בפעם הבאה.',
+ q:'מה היית עושה אחרת, אילו היית מתחיל/ה מחדש?',
+ ins:'טעות שלמדנו ממנה היא לא כישלון. היא מידע.',
+ gp:'לשתף גם בטעויות של עצמם, ולא רק בהצלחות.',
+ val:['חשיבה צעד אחד קדימה','הפחתת אימפולסיביות','למידה משגיאות','ניסוח עקרונות'],
+ life:'מבחן שחוזר, ריב עם חבר, משחק כדורגל: כל אחד מהם הוא הזדמנות ל"הילוך חוזר".',
+ src:['Gemini','ChatGPT','Claude','Perplexity','Grok','DeepSeek'],founder:2},
+{id:'plan',n:'תכנון, סדר וחשיבה קדימה',tag:'מכינים לפני שמתחילים',
+ idea:'רוב הבעיות נמנעות עוד לפני שמתחילים: מכינים את מה שצריך, קובעים סדר, וחושבים מה עושים אם משהו משתנה.',
+ skill:'היערכות מוקדמת, זיהוי סדר ותלויות ("מה חייב לבוא לפני מה"), ותוכנית חלופית.',
+ q:'מה חייב להיות מוכן לפני שאפשר להתחיל?',
+ ins:'תוכנית טובה היא לא כזו שהכול הולך לפיה, אלא כזו שיודעת מה לעשות כשלא.',
+ gp:'לתת לנכד/ה להוביל את התכנון, גם כשהדרך שלו/ה שונה מהמוכרת.',
+ val:['ארגון','סדר פעולות ותלויות','גמישות מחשבתית','אחריות'],
+ life:'הכנת תיק לבית הספר, עבודה בקבוצה, טיול משפחתי.',
+ src:['ChatGPT','Claude','Perplexity','Grok','DeepSeek']},
+{id:'solve',n:'פתרון בעיות וחשיבה יצירתית',tag:'קודם להבין, אחר כך לתקן',
+ idea:'לפני שמנסים לתקן, מבינים מה בדיוק הבעיה. אחר כך משנים דבר אחד בכל פעם, ומחפשים יותר מפתרון אחד.',
+ skill:'אבחון במקום ניחוש, ניסוי מבוקר, יצירת חלופות, ועבודה בתוך מגבלות.',
+ q:'מה בדיוק לא עובד, ואיך נדע שתיקנו?',
+ ins:'לכל בעיה יש יותר מפתרון אחד, והראשון שעולה לראש אינו תמיד הטוב ביותר.',
+ gp:'הנכד/ה מציע/ה פתרונות שהניסיון כבר פסל, ולפעמים הם דווקא עובדים.',
+ val:['חשיבה מדעית','הבנת סיבה ותוצאה','יצירתיות','התמדה'],
+ life:'תקלה במחשב, שאלה קשה בשיעורי הבית, ויכוח שצריך לו פתרון שלישי.',
+ src:['Gemini','ChatGPT','Perplexity','Grok','DeepSeek']},
+{id:'safe',n:'בטיחות, בדיקה וסימנים מוקדמים',tag:'בודקים לפני שסומכים',
+ idea:'חושבים צעד אחד קדימה, מזהים סימן מוקדם לפני שנגרם נזק, ובודקים לפני שסומכים על הנחה.',
+ skill:'חיזוי סיכונים, בדיקה במקום הנחה, ערנות לשינויים קטנים, וידיעה מתי לבקש עזרה.',
+ q:'זה באמת בטוח, או רק נראה בטוח?',
+ ins:'רוב התקלות שולחות סימנים לפני שהן קורות. מי שמסתכל, רואה אותם.',
+ gp:'הנכד/ה שם/ה לב לסכנות שהמבוגר כבר התרגל אליהן.',
+ val:['אחריות','זהירות בלי פחד','שיקול דעת','הכרת גבולות היכולת'],
+ life:'חציית כביש, אתר אינטרנט חשוד, הבטחה שנשמעת טוב מדי.',
+ src:['ChatGPT','Claude','Grok']},
+{id:'listen',n:'תקשורת והקשבה',tag:'מקשיבים עד הסוף',
+ idea:'הקשבה מלאה, בלי להכין את התשובה בזמן שהשני מדבר, והסבר ברור שבודק שהשני באמת הבין.',
+ skill:'הקשבה פעילה, ניסוח מדויק, ושאלת שאלות במקום ניחוש.',
+ q:'מה בדיוק אמר השני, לפני שענית?',
+ ins:'להבין את השני חשוב יותר מלהספיק לענות.',
+ gp:'לחכות שלוש שניות גם לפני שמתקנים את הנכד/ה.',
+ val:['אמפתיה','בהירות','סבלנות בשיחה','בדיקת הבנה'],
+ life:'שיחה עם מורה, ויכוח עם אח, עבודה בקבוצה.',
+ src:['Gemini','ChatGPT','Claude','Grok','DeepSeek']},
+{id:'team',n:'שיתוף פעולה ומנהיגות הדדית',tag:'פעם אני מוביל/ה, פעם את/ה',
+ idea:'עבודה משותפת דורשת תיאום, חלוקת תפקידים, ונכונות גם להוביל וגם להיות מובל/ת.',
+ skill:'תיאום, החלפת תפקידים, עזרה בלי השתלטות, ובניית אמון.',
+ q:'מה היית צריך/ה מהשותף/ה שלך, והאם ביקשת?',
+ ins:'לעזור אין פירושו לעשות במקום. לפעמים העזרה הטובה ביותר היא רמז.',
+ gp:'להיות מובלים על ידי הנכד/ה, ולשחרר שליטה.',
+ val:['מנהיגות','אמון','כבוד ליכולת של השני','עבודת צוות'],
+ life:'עבודה בזוגות בכיתה, קבוצת ספורט, עזרה לאח צעיר.',
+ src:['Gemini','ChatGPT','Claude','Perplexity','Grok']},
+{id:'calm',n:'ויסות רגשי, סבלנות והתמדה',tag:'עוצרים לפני שמתייאשים',
+ idea:'לזהות תסכול לפני שהוא משתלט, לעצור, לנשום ולחזור. להתקדם בצעדים קטנים ולראות את ההתקדמות.',
+ skill:'ויסות רגשי, השהיית סיפוק, התמדה מדורגת, ויחס בריא לטעויות.',
+ q:'איפה את/ה עכשיו במד הרגש, מ־1 עד 5?',
+ ins:'גם מבוגרים מתעצבנים. ההבדל הוא שהם למדו מה לעשות עם זה.',
+ gp:'לספר על קשיים של עצמם, ולא רק על ניצחונות.',
+ val:['חוסן','מסוגלות עצמית','סבלנות','הנאה מהתהליך'],
+ life:'מבחן קשה, הפסד במשחק, מיומנות חדשה שלא מצליחה בפעם הראשונה.',
+ src:['ChatGPT','Perplexity','Grok','DeepSeek']},
+{id:'own',n:'אחריות ועצמאות',tag:'מסיימים עד הסוף',
+ idea:'לעשות לבד את מה שאפשר, לסיים משימה עד הסוף, ולחשוב גם על מי שיבוא אחרינו.',
+ skill:'מחזור עבודה שלם (מתכננים, מבצעים, מפנים), יוזמה, ושמירה על משאבים.',
+ q:'המשימה באמת הסתיימה, או רק החלק הכיפי שלה?',
+ ins:'משימה לא נגמרת כשסיימנו ליהנות, אלא כשהשארנו את המקום מוכן לפעם הבאה.',
+ gp:'לתת אחריות אמיתית, ולקבל תוצאה שאינה מושלמת.',
+ val:['אחריות','עצמאות','קיימות וחיסכון','התחשבות באחר'],
+ life:'החדר שלי, ציוד משותף בכיתה, הכלים אחרי ארוחה.',
+ src:['ChatGPT','Claude']},
+{id:'story',n:'זיכרון, סיפור וזהות משפחתית',tag:'אוצר שלא נכתב',
+ idea:'לסבא ולסבתא יש ידע וסיפורים שלא כתובים בשום מקום. העברתם היא חלק מהחניכה, וגם הנכד/ה מלמד/ת משהו בתמורה.',
+ skill:'שאילת שאלות, הקשבה, תיעוד, והבנת נקודת המבט של דור אחר.',
+ q:'מה מהסיפור הזה את/ה לוקח/ת לחיים שלך?',
+ ins:'כל דור יודע משהו שהשני לא יודע.',
+ gp:'לשמוע איך הסיפורים שלהם נשמעים לאוזניים צעירות.',
+ val:['שייכות וזהות','אמפתיה','זיכרון','כבוד בין־דורי'],
+ life:'עבודת שורשים, היכרות עם אדם ממקום אחר, הבנת ההחלטות של ההורים.',
+ src:['ChatGPT','Claude','Perplexity','Grok','DeepSeek']},
+];
+
+/* t: j = משותפת, s = יחידנית. ad: התאמות לגילאים [4–7, 8–12, 13–18] */
+const ACTS=[
+// 1 hands
+{id:'free-hand',c:'hands',n:'יד עובדת, יד בשמירה',t:'j',age:'5–12',min:'15–20',mat:'ירקות רכים, סכין המתאימה לגיל, קרש חיתוך, צלחת או מגבת שתשמש "תחנת עגינה" לכלים',src:['Gemini','Claude','Grok','DeepSeek'],
+ open:'היום נכין סלט יחד, ונלמד כלל אחד: כלי שסיים את תפקידו חוזר מיד ל"תחנה" שלו, ויד אחת נשארת תמיד פנויה.',
+ do:['מסמנים על השולחן "תחנת עגינה" לכל כלי.','יד אחת מייצבת את הירק, והשנייה חותכת.','סיימתם לחתוך? הסכין חוזרת לתחנה לפני שמרימים את הקערה.','מדי פעם שואלים "איפה היד השנייה?", ובודקים יחד.'],
+ q:'מה קרה ברגע שבו שכחנו להחזיר כלי לתחנה?',
+ ad:['סכין פלסטיק או מריחה בלבד. התחנה מסומנת בציור.','סכין קטנה בהשגחה, ומתכון של 4–5 שלבים.','הנער/ה מתכנן/ת את סידור השולחן ומסביר/ה את הכלל.'],
+ safe:'כלים חדים רק בהשגחה צמודה ובהתאם לגיל וליכולת.'},
+{id:'clean-station',c:'hands',n:'תחנת פירוק נקייה',t:'j',age:'7–16',min:'20–30',mat:'מכשיר או צעצוע ישן ומנותק, מברגים, מגש עם תאים או תבנית ביצים',src:['Gemini','DeepSeek','Grok'],
+ open:'היום נפרק מכשיר ישן ונגלה מה יש בתוכו. הכלל: אף פעם לא מחזיקים שני דברים ביד.',
+ do:['מצלמים את המכשיר לפני הפירוק.','כל בורג או חלק שיוצא נכנס מיד לתא במגש, לפי הסדר.','לפני כל חלק חדש בודקים: הידיים ריקות?','בסוף מנסים להרכיב בחזרה בעזרת המגש והתמונה.'],
+ q:'איך המגש עזר לנו לחזור אחורה?',
+ ad:['צעצוע פשוט עם 3–4 ברגים.','מכשיר עם כמה שכבות. ממספרים את התאים.','משרטטים תרשים של החלקים ומשערים מה התפקיד של כל אחד.'],
+ safe:'רק מכשירים מנותקים מחשמל ובלי סוללות. לא מפרקים מכשירים עם קבלים גדולים, כמו טלוויזיה או מיקרוגל.'},
+{id:'my-desk',c:'hands',n:'פינת העבודה שלי',t:'s',age:'5–18',min:'20 דקות, ושלושה ימי ניסיון',mat:'הפינה שבה הנכד/ה מכין/ה שיעורים או יוצר/ת, טלפון לצילום',src:['ChatGPT','Perplexity'],
+ open:'השבוע תסדר/י לבד את פינת העבודה שלך, ותבדוק/י אם סידור אחר משנה את הדרך שבה את/ה עובד/ת.',
+ do:['מצלמים את הפינה כמו שהיא.','ממיינים לשלוש ערימות: "צריך עכשיו", "יידרש אחר כך", "לא צריך כאן".','לכל כלי שנשאר קובעים מקום קבוע.','עובדים כך שלושה ימים, ורושמים מה השתנה. מביאים את התמונות למפגש.'],
+ q:'מה היה קל יותר למצוא? למה עדיין אין מקום?',
+ ad:['קופסה אחת עם שלושה תאים מצוירים.','פינת שיעורי הבית.','גם "שולחן העבודה" במחשב או במסך הבית של הטלפון.']},
+// 2 slow
+{id:'draw-twice',c:'slow',n:'ציור פעמיים',t:'j',age:'5–16',min:'15–20',mat:'חפץ אחד, דפים, עפרונות, טיימר',src:['ChatGPT','DeepSeek','Gemini','Claude'],
+ open:'נצייר את אותו חפץ פעמיים: פעם מהר ופעם לאט. נראה מה העין מגלה כשנותנים לה זמן.',
+ do:['דקה אחת: ציור מהיר.','שתי דקות של התבוננות בשקט, בלי לצייר.','חמש דקות: ציור איטי, כשהעיניים חוזרות שוב ושוב לחפץ.','מניחים את שני הציורים זה לצד זה.'],
+ q:'מה ראית בפעם השנייה שלא הבחנת בו בראשונה?',
+ ad:['חפץ גדול ופשוט. משווים בעל פה.','חפץ עם פרטים. כותבים ליד כל ציור מה שמת/ה לב אליו.','מוסיפים ציור שלישי בקו רציף, בלי להרים את העיפרון ובלי להסתכל על הדף.']},
+{id:'nature-silence',c:'slow',n:'שתי דקות של שקט בטבע',t:'j',age:'4–14',min:'20–30',mat:'זכוכית מגדלת, מחברת קטנה, עיפרון',src:['Gemini','Perplexity','Grok','Claude'],
+ open:'נצא לחצר ונהיה חוקרי טבע. נבחר דבר קטן אחד ונתבונן בו שתי דקות, בלי לגעת ובלי לדבר.',
+ do:['הולכים לאט, ועוצרים כל כמה צעדים.','כל אחד בוחר דבר קטן: עלה, שיירת נמלים, קליפת עץ.','שתי דקות של שקט מלא, עם זכוכית מגדלת.','כל אחד מתאר שלושה דברים שראה, ומשרטט אחד מהם.'],
+ q:'מה היינו מחמיצים, אילו היינו רצים?',
+ ad:['דקה אחת. מחפשים צבעים וצורות.','שתי דקות, ורישום במחברת חוקר.','חוזרים לאותו מקום בעוד שבוע ומשווים: מה השתנה?']},
+{id:'what-changed',c:'slow',n:'מה השתנה מאז אתמול?',t:'s',age:'6–16',min:'2 דקות ביום, במשך שבוע',mat:'צמח או שתיל, טלפון לצילום, מחברת',src:['ChatGPT','Claude','Perplexity'],
+ open:'תבחר/י צמח אחד ותצלם/י אותו כל יום, באותה שעה ומאותה זווית. נלמד לראות שינוי קטן לפני שהוא נהיה גדול.',
+ do:['בוחרים צמח ומקום קבוע לצילום.','כל יום: תמונה, ושורה אחת ביומן: מה השתנה?','אחרי שבוע מסדרים את התמונות ברצף.','מביאים את היומן למפגש ומספרים.'],
+ q:'איזה שינוי ראית רק כשהשווית בין התמונות?',
+ ad:['ציור במקום כתיבה, ועזרה בצילום.','יומן תמונות ומשפט אחד ביום.','מדידה (גובה, מספר עלים) וגרף פשוט.']},
+// 3 reflect
+{id:'replay',c:'reflect',n:'הילוך חוזר במשחק',t:'j',age:'5–18',min:'20–30',mat:'משחק לוח: ארבע בשורה, מנקלה, דמקה או שחמט',src:['Gemini','ChatGPT','Perplexity','DeepSeek'],
+ open:'נשחק כרגיל, אבל מדי פעם נעצור ונחשוב בקול. בסוף נבחר מהלך אחד ונבדוק אותו מחדש.',
+ do:['לפני מהלך חשוב אומרים בקול: "אם אעשה כך, אז…".','אחרי מהלך משמעותי של השני שואלים: "מה לדעתך הוא/היא מתכנן/ת?"','בסוף המשחק בוחרים יחד מהלך אחד שהכריע.','מחזירים את הלוח לאותו רגע ומנסים מהלך אחר.'],
+ q:'מה חשבת ברגע שבחרת? מה לא ראית אז?',
+ ad:['ארבע בשורה או מנקלה. עצירה אחת בכל משחק.','דמקה. "אם… אז…" לפני כל מהלך שלישי.','שחמט. רושמים את המהלכים ומנתחים שניים מהם.']},
+{id:'lessons-book',c:'reflect',n:'פנקס הלקחים המשפחתי',t:'j',age:'4–18',min:'10 דקות בסוף כל מפגש',mat:'מחברת משותפת שנשארת אצל סבא או סבתא',src:['Claude','ChatGPT','DeepSeek'],
+ open:'אחרי כל פעילות נכתוב שלוש שורות בפנקס משותף. בפעם הבאה נתחיל בקריאת השורות.',
+ do:['בוחרים את הפעילות של היום: עוגה, בנייה, טיול.','כל אחד אומר בקול: מה עשינו, מה עבד, מה נשנה.','מסכמים לשלוש שורות, והנכד/ה כותב/ת או מצייר/ת.','במפגש הבא פותחים בקריאת הלקח ומנסים ליישם אותו.'],
+ q:'האם הלקח מהפעם הקודמת עזר לנו היום?',
+ ad:['שלושה ציורים קטנים במקום שורות.','שלוש שורות בכתב יד.','מוסיפים עמודה: "איפה עוד זה נכון בחיים?"']},
+{id:'my-routine',c:'reflect',n:'הדרך שלי לעשות את זה',t:'s',age:'7–18',min:'15 דקות, ושלושה ימי ניסיון',mat:'טלפון להקלטה',src:['DeepSeek'],
+ open:'תבחר/י פעולה שגרתית ותבצע/י אותה לאט, תוך תיאור בקול של כל שלב. נחפש שיפור אחד קטן.',
+ do:['בוחרים פעולה: סידור המיטה, הכנת תיק, שטיפת כלים.','מבצעים לאט ומתארים בקול. אפשר להקליט.','מקשיבים להקלטה ומסמנים שלב אחד מיותר או מסורבל.','מנסים את הדרך החדשה שלושה ימים, ומספרים במפגש.'],
+ q:'מה גילית על פעולה שעשית כבר מאות פעמים?',
+ ad:['עם מבוגר, ושלושה שלבים בלבד.','הקלטה קולית.','משווים את הזמן לפני השינוי ואחריו.']},
+// 4 plan
+{id:'kitchen-class',c:'plan',n:'המטבח ככיתה',t:'j',age:'5–15',min:'40–60',mat:'מתכון עוגיות פשוט, מרכיבים, קערות קטנות',src:['DeepSeek','ChatGPT','Grok'],
+ open:'נאפה עוגיות, אבל לפני שמדליקים את התנור נכין הכול: נקרא את המתכון עד הסוף ונוציא כל מרכיב וכל כלי.',
+ do:['קוראים יחד את המתכון עד הסוף.','מוציאים ומודדים את כל המרכיבים לקערות קטנות.','מסמנים במתכון: מה חייב לקרות לפני מה.','אופים, ובכל שלב בודקים ברשימה.'],
+ q:'מה היה קורה אילו גילינו באמצע שחסרה ביצה?',
+ ad:['מתכון של שלושה שלבים. הילד/ה מוציא/ה מרכיבים לפי תמונות.','הילד/ה מודד/ת לבד.','הנער/ה מתכנן/ת את סדר הפעולות ואת הזמנים, ומוביל/ה.'],
+ safe:'תנור ואש רק בהשגחה.'},
+{id:'plan-b',c:'plan',n:'יום כיף עם תוכנית ב\'',t:'j',age:'5–18',min:'20 דקות תכנון, ועוד 10 אחרי היום',mat:'דף גדול, טושים',src:['DeepSeek','ChatGPT','Claude'],
+ open:'נתכנן יחד יום כיף: מה לוקחים, מה הסדר, ומה עושים אם יורד גשם. אחרי היום נבדוק מה קרה באמת.',
+ do:['בוחרים יעד וכותבים רשימת ציוד.','מסמנים שלושה דברים שחייבים לקרות, ושניים שנחמד אם יקרו.','לכל "מה אם" (גשם, עיכוב, עייפות) כותבים תשובה.','אחרי היום חוזרים לדף ומסמנים: מה קרה, מה לא, ומה שכחנו.'],
+ q:'איזו תוכנית גיבוי עזרה באמת?',
+ ad:['תוכנית של שלושה ציורים.','תוכנית מלאה. הילד/ה בוחר/ת את העדיפויות.','כולל תקציב ולוח זמנים. הנער/ה מוביל/ה.']},
+{id:'depends',c:'plan',n:'מה תלוי במה?',t:'s',age:'6–14',min:'30–45',mat:'קרטונים, מספריים בטוחים, דבק, דף לתוכנית',src:['ChatGPT','Perplexity'],
+ open:'תתכנן/י לבד בית מקרטון. לפני שבונים, תשרטט/י את סדר השלבים: מה חייב לבוא לפני מה.',
+ do:['משרטטים את הבית.','כותבים את השלבים על פתקים נפרדים.','מסדרים את הפתקים בשורה: מה אי אפשר לעשות לפני מה (למשל: קירות לפני גג).','בונים לפי הסדר, ומביאים למפגש את הבית ואת שורת הפתקים.'],
+ q:'איזה שלב גילית שהיה צריך לבוא מוקדם יותר?',
+ ad:['שלושה פתקים בציורים. מבוגר עוזר בגזירה.','שישה עד שמונה פתקים.','מוסיפים זמן משוער לכל שלב ומסמנים את השלבים שאפשר לעשות במקביל.']},
+// 5 solve
+{id:'paper-plane',c:'solve',n:'מטוס נייר: משנים רק דבר אחד',t:'j',age:'6–16',min:'30',mat:'דפים, סרט מדידה או ספירת צעדים, טבלה',src:['ChatGPT'],
+ open:'נבנה מטוסי נייר ונבדוק מה גורם להם לעוף רחוק. הכלל: בכל ניסוי משנים רק דבר אחד.',
+ do:['בונים מטוס בסיס ומודדים שלוש זריקות.','בוחרים משתנה אחד: אורך הכנף, קיפול בקצה, משקל באף.','משנים רק אותו, ומודדים שוב שלוש זריקות.','רושמים בטבלה ומחליטים מה השפיע.'],
+ q:'איך ידענו מה גרם לשינוי?',
+ ad:['משווים שני מטוסים בלבד: "רחוק" או "קרוב".','טבלה עם מדידות בצעדים.','ממוצע של זריקות, וניסוח השערה לפני כל ניסוי.']},
+{id:'ten-items',c:'solve',n:'גשר מעשרה פריטים',t:'j',age:'5–16',min:'30',mat:'קיסמים, נייר, סלוטייפ, כוסות פלסטיק, מטבעות',src:['Grok','ChatGPT','Perplexity'],
+ open:'נבנה גשר שיחזיק מטבעות, רק מעשרה פריטים. נתכנן לפני שמתחילים, ונלמד מכל נפילה.',
+ do:['כל אחד משרטט רעיון אחד בנפרד.','בוחרים יחד רעיון אחד ובונים.','מעמיסים מטבעות עד שהגשר קורס.','בודקים איפה הוא נשבר, משפרים ובונים שוב.'],
+ q:'מה לימדה אותנו הנפילה?',
+ ad:['גשר בין שני ספרים לצעצוע קטן.','עשרה פריטים, וספירת מטבעות.','"קונים" פריטים בתקציב מוגבל, ומשווים בין משקל הגשר למשקל שהוא נושא.']},
+{id:'broken-toy',c:'solve',n:'הצעצוע שלא עובד',t:'s',age:'6–16',min:'20–30',mat:'חפץ פשוט שלא עובד כמו שצריך, דף ועט',src:['ChatGPT','DeepSeek'],
+ open:'תבחר/י חפץ פשוט שלא עובד, ותכתוב/י בדיוק מה הבעיה לפני שאת/ה נוגע/ת בו.',
+ do:['מתארים: מה אמור לקרות, ומה קורה במקום.','כותבים שלוש סיבות אפשריות.','בודקים כל סיבה, מהקלה לקשה: סוללה, חיבור, חלק שבור.','מביאים למפגש את רשימת הבדיקות, בין שתיקנת ובין שלא.'],
+ q:'איזו בדיקה הפתיעה אותך?',
+ ad:['עם מבוגר. פנס או צעצוע עם סוללות.','רשימת בדיקות כתובה.','גם תקלה במחשב או בטלפון, ותיעוד הפתרון למי שייתקל בה שוב.'],
+ safe:'בלי מכשירים שמחוברים לחשמל הביתי.'},
+// 6 safe
+{id:'obstacles',c:'safe',n:'מסלול המכשולים הבטוח',t:'j',age:'4–12',min:'30',mat:'כריות, כיסאות, חבל, חפץ קטן להחזיק',src:['ChatGPT','Grok'],
+ open:'נבנה מסלול מכשולים בבית. לפני שעוברים בו, נחפש יחד איפה אפשר להיתקל.',
+ do:['בונים מסלול מכריות, כיסאות וחבל.','לפני המעבר כל אחד מסמן נקודה מסוכנת אחת.','מתקנים את הנקודות, ורק אז עוברים, לאט.','עוברים שוב כשיד אחת מחזיקה חפץ, ובודקים מה השתנה.'],
+ q:'איזו סכנה מצאנו רק כשעברנו בפועל?',
+ ad:['מסלול קצר. המבוגר מדגים.','הילד/ה בונה ומסמן/ת לבד.','הנער/ה בונה מסלול לילד/ה צעיר/ה יותר, ובודק/ת אותו בעיניים שלו/ה.']},
+{id:'test-bridge',c:'safe',n:'בודקים לפני שסומכים',t:'j',age:'5–14',min:'20',mat:'קוביות, מכונית צעצוע, משקולות קטנות או מטבעות',src:['ChatGPT','Claude'],
+ open:'נבנה גשר קוביות, ולפני שנעביר עליו מכונית נבדוק אם הוא באמת מחזיק.',
+ do:['בונים גשר.','כל אחד מנחש: יחזיק או לא? ולמה?','בודקים בהדרגה: משקל קטן, ואחר כך גדול יותר.','מתקנים ובודקים שוב.'],
+ q:'האם הניחוש היה נכון? על מה הוא נשען?',
+ ad:['קוביות גדולות ומכונית צעצוע.','טבלה של ניחוש מול תוצאה.','בודקים גם "מה אם": מכה מהצד, משקל לא מאוזן.']},
+{id:'early-signs',c:'safe',n:'יומן הסימנים המוקדמים',t:'s',age:'6–16',min:'2 דקות ביום, במשך שבועיים',mat:'עציץ, מחברת',src:['ChatGPT','Grok'],
+ open:'תטפל/י בעציץ במשך שבועיים, ותחפש/י סימנים קטנים שמראים שמשהו לא בסדר, עוד לפני שהצמח נובל.',
+ do:['מכירים את הצמח: איך הוא נראה כשטוב לו.','כל יום בודקים שלושה דברים: אדמה, עלים, צבע.','רושמים כל סימן קטן, ומה עשית בעקבותיו.','מביאים למפגש את היומן ואת הצמח, או תמונה שלו.'],
+ q:'איזה סימן ראית מוקדם, ומה היה קורה אילו לא היית רואה אותו?',
+ ad:['בדיקת האדמה באצבע וסימון בטבלת מדבקות.','יומן כתוב.','שני עציצים בטיפול שונה, והשוואה ביניהם.']},
+// 7 listen
+{id:'three-seconds',c:'listen',n:'חוק שלוש השניות',t:'j',age:'6–18',min:'15',mat:'נושא לשיחה, סיפור קצר או חידה',src:['Gemini'],
+ open:'נדבר על נושא שמעניין את שנינו, עם כלל אחד: אחרי שהשני מסיים, סופרים בשקט עד שלוש, ורק אז עונים.',
+ do:['בוחרים נושא או קוראים סיפור קצר.','מדברים בתורות, ושלוש שניות של שקט לפני כל תשובה.','לפני שעונים, מסכמים במשפט אחד מה השני אמר.','אחרי עשר דקות עוצרים ומשווים לשיחה רגילה.'],
+ q:'מה השתנה בתשובות שלך כשחיכית?',
+ ad:['סופרים על האצבעות. שיחה של חמש דקות.','מוסיפים סיכום במשפט אחד.','נושא שיש עליו מחלוקת.']},
+{id:'draw-by-words',c:'listen',n:'צייר לפי ההסבר שלי',t:'j',age:'6–16',min:'20',mat:'דפים, עפרונות, מחיצה או ספר עומד',src:['ChatGPT','Claude','Grok'],
+ open:'אחד יתאר ציור, והשני יצייר בלי לראות אותו. נגלה כמה קשה להסביר בדיוק.',
+ do:['אחד מצייר צורה פשוטה בסתר.','מתאר אותה במילים בלבד, בלי ידיים.','השני מצייר. בסיבוב השני מותר לו גם לשאול שאלות.','משווים ומחליפים תפקידים.'],
+ q:'איזו מילה גרמה לבלבול? מה עזר להבין?',
+ ad:['צורה אחת או שתיים, וצבעים.','ציור גאומטרי של 4–5 צורות.','מסלול במפה, או הוראות הרכבה.']},
+{id:'listen-interview',c:'listen',n:'להקשיב יותר מלדבר',t:'s',age:'7–18',min:'20',mat:'דף שאלות, טלפון להקלטה (בהסכמה)',src:['DeepSeek','Claude'],
+ open:'תראיין/י מישהו מהמשפחה או חבר/ה על משהו שהוא או היא אוהבים. המטרה: להקשיב יותר מלדבר.',
+ do:['מכינים שלוש שאלות פתוחות.','בזמן הראיון שואלים שאלת המשך אחת על כל תשובה.','רושמים שלוש נקודות מרכזיות.','מסכמים למרואיין/ת ובודקים: "הבנתי נכון?" ומספרים במפגש.'],
+ q:'מה למדת, שלא היית יודע/ת אילו רק דיברת?',
+ ad:['שתי שאלות מוכנות. מבוגר רושם.','שלוש שאלות וסיכום בעל פה.','הקלטה בהסכמה, וסיכום כתוב.']},
+// 8 team
+{id:'two-roles',c:'team',n:'אחד מחזיק, אחד מבצע',t:'j',age:'5–14',min:'15',mat:'קופסה, נייר עטיפה, סלוטייפ, סרט',src:['ChatGPT','Grok','Perplexity'],
+ open:'נעטוף מתנה יחד: אחד מחזיק והשני מדביק. כל כמה דקות מחליפים, ולפני ההחלפה מדברים.',
+ do:['מחלקים תפקידים: "מחזיק/ה" ו"מבצע/ת".','עוטפים, וכל אחד אחראי רק לחלק שלו.','לפני ההחלפה: "מה היה קשה בתפקיד שלי? מה אני צריך/ה ממך?"','מחליפים תפקידים ומסיימים.'],
+ q:'איך ידעת מה השני צריך, בלי שאמר?',
+ ad:['קופסה גדולה ומדבקות.','עטיפה רגילה.','משימה עם יותר שלבים, כמו הרכבת רהיט קטן.']},
+{id:'hints-only',c:'team',n:'עוזרים רק ברמזים',t:'j',age:'5–16',min:'20',mat:'פאזל, או חידה לוגית לגדולים',src:['ChatGPT'],
+ open:'אחד מרכיב פאזל, והשני רשאי לעזור רק ברמזים, לא בידיים.',
+ do:['בוחרים פאזל שמאתגר מעט את מי שמרכיב.','העוזר/ת נותן/ת רק רמזים: "חפש/י כחול בפינה".','אחרי עשר דקות מחליפים תפקידים.','מדברים: איזה רמז עזר, ואיזה הרגיש כמו השתלטות?'],
+ q:'מתי היה לך קשה לא לעשות במקום?',
+ ad:['פאזל של 24 חלקים. רמזים של צבע.','פאזל של 100 חלקים.','חידה לוגית או סודוקו.']},
+{id:'i-teach',c:'team',n:'אני מלמד/ת את סבא וסבתא',t:'s',age:'6–18',min:'20 דקות הכנה, ו־15 במפגש',mat:'דף לשלבים',src:['Claude','ChatGPT'],
+ open:'תבחר/י משהו שאת/ה יודע/ת לעשות טוב, שסבא או סבתא לא יודעים, ותכין/י שיעור קצר.',
+ do:['בוחרים נושא: פעולה בטלפון, משחק, טריק.','כותבים את השלבים, לא יותר משישה.','מתרגלים את ההסבר מול בן משפחה.','במפגש מלמדים, ונותנים לסבא או לסבתא לעשות בעצמם.'],
+ q:'מה היה קשה בתפקיד המורה?',
+ ad:['משחק פשוט או שיר עם תנועות.','פעולה בטלפון או במחשב.','מיומנות מורכבת, עם דף הוראות שנשאר אצל המבוגר.']},
+// 9 calm
+{id:'mood-meter',c:'calm',n:'מד הרגש ושלוש נשימות',t:'j',age:'4–14',min:'20',mat:'דף ל"מד רגש", משימה מאתגרת (פאזל, בנייה)',src:['Perplexity','Grok','ChatGPT'],
+ open:'נעבוד על משימה קשה. כשמרגישים שמתעצבנים, עוצרים, מניחים את הכלים ונושמים שלוש נשימות.',
+ do:['מציירים "מד רגש" מ־1 (רגוע) עד 5 (כועס), וכל אחד מסמן איפה הוא עכשיו.','מתחילים במשימה מאתגרת.','מי שמגיע ל־3 אומר "עצור": מניחים ידיים ונושמים שלוש נשימות איטיות.','חוזרים למשימה, ובסוף מסמנים שוב במד.'],
+ q:'מה עזר לך לחזור למשימה?',
+ ad:['מד בפרצופים.','מספרים, ומילים לרגש.','מזהים גם סימנים בגוף: לסת, כתפיים, נשימה.']},
+{id:'hard-story',c:'calm',n:'הסיפור של הקושי',t:'j',age:'6–18',min:'20',mat:'אין צורך בציוד',src:['Perplexity','ChatGPT'],
+ open:'סבא או סבתא יספרו על פעם שהיה להם קשה ואיך התמודדו. אחר כך הנכד/ה יבחר/תבחר רגע משלו/ה.',
+ do:['המבוגר מספר סיפור קצר: מה היה קשה, מה הרגיש, מה עשה.','הנכד/ה שואל/ת שתי שאלות.','הנכד/ה מספר/ת על רגע קשה משלו/ה.','מחפשים יחד דבר אחד שעזר בשני הסיפורים.'],
+ q:'מה דומה בין שני הסיפורים, למרות כל השנים שביניהם?',
+ ad:['סיפור קצר, אפשר בעזרת בובה.','שיחה.','גם על החלטות שהתבררו כשגויות, ומה למדו מהן.']},
+{id:'next-step',c:'calm',n:'הצעד הקטן הבא',t:'s',age:'5–18',min:'10 דקות ביום, במשך שבוע',mat:'נייר לאוריגמי או חפיסת קלפים',src:['ChatGPT'],
+ open:'תלמד/י לבד קיפול אוריגמי או קסם פשוט, צעד אחר צעד, במשך שבוע. נשווה את הניסיון הראשון לאחרון.',
+ do:['שומרים את הניסיון הראשון.','מחלקים את המשימה לשלבים, ומתרגלים שלב אחד ביום.','כשנתקעים, עוצרים עד מחר וחוזרים.','מביאים למפגש את הניסיון הראשון ואת האחרון.'],
+ q:'מה השתפר? ומה עזר כשנתקעת?',
+ ad:['קיפול של שלושה שלבים: כוס, כלב.','עגורן, או קסם קלפים.','מיומנות לבחירתך, ותיעוד ההתקדמות בסרטון.']},
+// 10 own
+{id:'full-meal',c:'own',n:'ארוחה מההתחלה ועד הסוף',t:'j',age:'5–18',min:'60',mat:'מצרכים לארוחה פשוטה',src:['ChatGPT','Claude'],
+ open:'נכין ארוחה פשוטה, אבל המשימה כוללת גם את הפינוי, הניקוי והחזרת הכלים.',
+ do:['מתכננים תפריט קטן ומחלקים אחריות.','מבשלים.','אוכלים יחד.','מפנים, שוטפים ומחזירים כל כלי למקומו. בודקים: המטבח מוכן למי שבא אחרינו?'],
+ q:'על איזה חלק היה הכי קל לדלג?',
+ ad:['כריך או סלט. הילד/ה מפנה את הצלחת שלו/ה.','ארוחה של שתי מנות.','הנער/ה מתכנן/ת קנייה בתקציב מוגבל ומוביל/ה.'],
+ safe:'אש וכלים חדים בהשגחה.'},
+{id:'less-waste',c:'own',n:'פחות בזבוז, יותר תועלת',t:'j',age:'6–16',min:'20',mat:'כלי מדידה (כוס מדידה, דלי), דפים',src:['ChatGPT'],
+ open:'נבדוק שתי דרכים לעשות אותו דבר, ונמדוד כמה משאבים כל אחת צורכת.',
+ do:['בוחרים פעולה: שטיפת כלים, ציור, אריזה.','מבצעים בדרך הרגילה ומודדים: ליטרים של מים, מספר דפים.','מחפשים דרך חסכונית ומבצעים שוב.','משווים ומחליטים מה מאמצים.'],
+ q:'על מה ויתרנו כדי לחסוך, והאם זה שווה?',
+ ad:['משווים "הרבה" ו"מעט" בעין.','מדידה במספרים.','מחשבים חיסכון לשנה שלמה.']},
+{id:'my-bag',c:'own',n:'התיק שאני הכנתי',t:'s',age:'5–14',min:'20',mat:'תיק, רשימה שהנכד/ה כותב/ת',src:['ChatGPT','Claude'],
+ open:'לפני הטיול הבא תכין/י לבד את התיק, לפי רשימה שתכתוב/י בעצמך. סבא או סבתא רק יבדקו בסוף.',
+ do:['כותבים רשימה: מה צריך, ולמה.','אורזים לבד, ומסמנים כל פריט.','המבוגר בודק רק בסוף, ושואל שאלות במקום לתקן.','אחרי הטיול: מה היה מיותר? מה היה חסר?'],
+ q:'מה תוסיף/י לרשימה בפעם הבאה?',
+ ad:['רשימה בתמונות, ותיק קטן.','רשימה כתובה.','תיק ליום שלם או ללינה, כולל ציוד משותף.']},
+// 11 story
+{id:'interview',c:'story',n:'ראיון הדדי',t:'j',age:'5–18',min:'30',mat:'דף שאלות, טלפון להקלטה (בהסכמה)',src:['DeepSeek','Claude','Grok'],
+ open:'הנכד/ה יראיין/תראיין את סבא או סבתא על ילדותם, ואחר כך נחליף תפקידים.',
+ do:['כל אחד בוחר נושא: המבוגר את ילדותו, והנכד/ה תחביב או חלום.','ראיון של חמש דקות. המראיין/ת רושם/ת שלוש נקודות.','מחליפים תפקידים.','כל אחד מסכם בקול את מה ששמע, והשני מאשר או מתקן.'],
+ q:'מה הפתיע אותך בתשובות?',
+ ad:['ראיון של שתי דקות, עם שתי שאלות מוכנות. המבוגר רושם.','שלוש או ארבע שאלות שהנכד/ה מכין/ה לבד.','ראיון מלא, הקלטה בהסכמה וסיכום כתוב.']},
+{id:'recipe-story',c:'story',n:'המתכון של סבתא (או של סבא)',t:'j',age:'5–18',min:'45–60',mat:'מצרכים למאכל משפחתי פשוט, כרטיס מתכון',src:['Perplexity','DeepSeek'],
+ open:'נכין יחד מאכל משפחתי, ובזמן ההכנה נספר מי לימד את המתכון, ומתי.',
+ do:['בוחרים מאכל שיש לו סיפור.','מבשלים יחד, והמבוגר מספר מאיפה המתכון הגיע.','הנכד/ה שואל/ת שלוש שאלות על הסיפור.','כותבים יחד כרטיס מתכון, עם שורה אחת של הסיפור.'],
+ q:'מה מהמתכון, או מהסיפור, תרצה/י להעביר הלאה?',
+ ad:['מאכל ללא אש. הנכד/ה מצייר/ת את הכרטיס.','הנכד/ה כותב/ת את הכרטיס.','הנער/ה משנה דבר אחד במתכון ומתעד/ת את הגרסה החדשה.'],
+ safe:'אש וכלים חדים בהשגחה.'},
+{id:'object-story',c:'story',n:'חפץ עם סיפור',t:'s',age:'6–18',min:'30',mat:'חפץ ישן מהבית, כרטיס קטן',src:['Claude','Perplexity'],
+ open:'תבחר/י חפץ ישן בבית, תברר/י מה הוא ומה הסיפור שלו, ותכין/י לו שלט של מוזיאון.',
+ do:['בוחרים חפץ שנראה ישן או מסתורי.','שואלים בני משפחה: מה זה? של מי היה? מה הסיפור?','כותבים שלט קצר: שם, שנה משוערת, סיפור במשפט אחד.','מציגים במפגש, וסבא או סבתא מוסיפים מה שהם יודעים.'],
+ q:'מה החפץ הזה מספר על החיים אז?',
+ ad:['תמונה במקום שלט, ומבוגר עוזר לשאול.','שלט כתוב.','גם חיפוש מידע על החפץ ועל התקופה, ו"מוזיאון" של שלושה חפצים.']},
+];
+
+const STAGE_Q=['מה עשינו?','מה עבד?','מה היינו עושים אחרת?','איפה זה דומה לחיים?'];
+const AGES=['4–7','8–12','13–18'];
+const BOTS={Gemini:'4 קטגוריות: ניהול מרחב, האטה, קריאת המציאות, תקשורת והקשבה.',ChatGPT:'8 קטגוריות ו־32 מיומנויות, כרטיסי פעילות, ושיטת חניכה בחמישה שלבים.',Claude:'6 קטגוריות, כולל תכנון לחירום וידע בין־דורי.',Perplexity:'6 קטגוריות, ומבנה שלושת השלבים: פתיחה, עשייה, התבוננות.',Grok:'13 קטגוריות, שכולן שומרות על שחרור היד ועל האטה והתבוננות.',DeepSeek:'6 קטגוריות, ודפי פעילות עם התאמות לגילאים ותוצר מסכם.'};
+
+const CX=Object.fromEntries(CATS.map(c=>[c.id,c]));
+const AX=Object.fromEntries(ACTS.map(a=>[a.id,a]));
+const actsOf=c=>ACTS.filter(a=>a.c===c);
+const ls={get(k){try{return localStorage.getItem(k)}catch(e){return null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){}}};
+let st={age:+(ls.get('gm-age')??-1),fc:'',ft:''};if(isNaN(st.age))st.age=-1;
+const tlabel=t=>t==='j'?'<span class="badge j">משותפת</span>':'<span class="badge s">יחידנית</span>';
+const ageFits=(a,i)=>{if(i<0)return true;const [lo,hi]=a.age.split('–').map(Number),[blo,bhi]=AGES[i].split('–').map(Number);return lo<=bhi&&hi>=blo;};
+function ageBar(){return `<div class="toolbar noprint"><span class="lbl">גיל הנכד/ה:</span><button type="button" class="chip" data-age="-1" aria-pressed="${st.age<0}">כל הגילאים</button>${AGES.map((g,i)=>`<button type="button" class="chip" data-age="${i}" aria-pressed="${st.age===i}">${g}</button>`).join('')}</div>`;}
+const actRow=a=>`<a class="act" href="#a-${a.id}"><span><span class="nm">${a.n}</span> ${tlabel(a.t)}</span><span class="go">←</span><span class="sub">${CX[a.c].n} · גיל ${a.age} · ${a.min}${/[א-ת]/.test(a.min)?'':' דקות'}</span></a>`;
+
+const V={};
+V.home=()=>`<p class="eyebrow">GrandMentor · חניכה בין־דורית</p>
+<h1>מיומנויות קטנות לחיים גדולים</h1>
+<p class="lead">סבא או סבתא ונכד או נכדה עושים יחד דבר פשוט: מבשלים, בונים, מציירים, משחקים, משתלים. בתוך הפעילות מתגלה מיומנות שימושית לכל תחומי החיים. זו מטא־מיומנות: לא "איך לבנות דגם", אלא איך לפעול, לחשוב, להתבונן וללמוד תוך כדי עשייה.</p>
+<h2>שתי הדוגמאות שמהן הכול התחיל</h2>
+<div class="grid2">
+ <a class="cat" href="#c-hands"><span class="badge f" style="align-self:flex-start">דוגמה 1</span><span class="nm">לשחרר יד אחת</span><span class="tg">יד שברגע זה אינה נחוצה מניחה את הכלי בצד ונשארת בכוננות לפעולה הבאה.</span><span class="meta">← ${CX.hands.n}</span></a>
+ <a class="cat" href="#c-slow"><span class="badge f" style="align-self:flex-start">דוגמה 2</span><span class="nm">לעבור לפעילות איטית ונינוחה</span><span class="tg">ולצידה התבוננות, הפקת לקחים וחשיבה על הפעולה הנוכחית ועל הקודמת.</span><span class="meta">← ${CX.slow.n} · ${CX.reflect.n}</span></a>
+</div>
+<h2>${CATS.length} קטגוריות של מטא־מיומנויות</h2>
+<div class="grid3">${CATS.map((c,i)=>`<a class="cat" href="#c-${c.id}"><span class="num">${i+1}</span><span class="nm">${c.n}</span><span class="tg">${c.tag}</span><span class="meta">${actsOf(c.id).length} פעילויות</span></a>`).join('')}</div>
+<h2>כל פעילות, שלושה שלבים</h2>
+<div class="flow"><span>1 · פתיחה</span><i>←</i><span>2 · עשייה</span><i>←</i><span>3 · התבוננות ותובנה משותפת</span></div>
+<p style="margin-top:10px">כך הפעילות לא נשארת רק משחק מהנה, אלא הופכת ללמידה. ראו <a href="#method">איך עובדים עם הפעילויות</a>.</p>
+${pager('home')}`;
+
+V.method=()=>`<p class="eyebrow">שיטה</p><h1>איך עובדים עם הפעילויות</h1>
+<p class="lead">סבא וסבתא אינם "מלמדים שיעור". הם מובילים עשייה, שואלים ומזמינים את הנכד/ה לגלות בעצמו/ה. המיומנות היא התירוץ, והשיחה היא הלב.</p>
+<h2>שלושת השלבים</h2>
+<div class="stages">
+ <div class="stage"><span class="n">1</span><div><h3>פתיחה</h3><p>מה נעשה היום, ומה נלמד ממנו. משפט אחד או שניים, בלי הרצאה.</p></div></div>
+ <div class="stage"><span class="n">2</span><div><h3>עשייה</h3><p>פעילות מוחשית, משחק או יצירה. הנכד/ה מנסה בדרך שלו/ה, בלי תיקון מיידי.</p></div></div>
+ <div class="stage"><span class="n">3</span><div><h3>התבוננות ותובנה משותפת</h3><p>ארבע שאלות קבועות, ושאלה אחת שמתאימה לפעילות:</p><ul class="rq">${STAGE_Q.map(q=>`<li>${q}</li>`).join('')}</ul></div></div>
+</div>
+<h2>שני סוגי פעילות</h2>
+<div class="grid2">
+ <div class="box"><span class="badge j">משותפת</span><p style="margin-top:8px">סבא או סבתא והנכד/ה עושים יחד, במפגש.</p></div>
+ <div class="box"><span class="badge s">יחידנית</span><p style="margin-top:8px">הנכד/ה מתנסה לבד, בבית או בין המפגשים, ומביא/ה את התוצר לשיחה במפגש הבא. כך המיומנות ממשיכה גם כשלא נפגשים.</p></div>
+</div>
+<h2>עקרונות</h2>
+<ul>
+<li><b>הנכד/ה מגלה, המבוגר שואל.</b> עדיף שהנכד/ה ינסח/תנסח את העיקרון במילים שלו/ה.</li>
+<li><b>תמיד יש רגע של שחרור ורגע של האטה:</b> מניחים כלי, עוצרים, מסתכלים.</li>
+<li><b>שאלות הן הזמנה לשיחה,</b> לא מבחן עם תשובה נכונה אחת.</li>
+<li><b>החניכה הדדית.</b> בכל קטגוריה יש גם "מה סבא וסבתא לומדים כאן".</li>
+<li><b>תוצר קטן שנשאר:</b> ציור, כרטיס, שורה בפנקס. הוא עוגן לזיכרון ולשיחה הבאה.</li>
+<li><b>בטיחות:</b> בפעילויות עם כלים, מטבח, אש או חשמל, מתאימים את הציוד ואת ההשגחה לגיל.</li></ul>
+<h2>להעמקה: חמישה צעדים</h2>
+<div class="flow"><span>התנסות</span><i>←</i><span>שאלה מעוררת</span><i>←</i><span>ניסיון שני</span><i>←</i><span>ניסוח הלקח</span><i>←</i><span>העברה לחיים</span></div>
+<p style="margin-top:10px">כשיש זמן, אפשר לפרוש את שלב העשייה לשני ניסיונות: הנכד/ה מנסה, סבא או סבתא שואלים שאלה אחת, ומנסים שוב עם שינוי אחד.</p>
+${pager('method')}`;
+
+CATS.forEach((c,i)=>{V['c-'+c.id]=()=>{const as=actsOf(c.id);return `<p class="eyebrow">קטגוריה ${i+1} מתוך ${CATS.length}</p>
+<h1>${c.n}</h1><p class="tagline">${c.tag}</p>
+${c.founder?`<p><span class="badge f">מבוסס על דוגמה ${c.founder} שלך</span></p>`:''}
+<div class="grid2" style="margin-top:16px">
+ <div class="box"><span class="k">הרעיון המוביל</span><p>${c.idea}</p></div>
+ <div class="box"><span class="k">המיומנות הנרכשת</span><p>${c.skill}</p></div>
+ <div class="box q"><span class="k">שאלת התבוננות</span><p>${c.q}</p></div>
+ <div class="box"><span class="k">תובנה משותפת לנכד/ה ולסבא/סבתא</span><p style="font-family:var(--f-display);font-weight:700;font-size:1.08rem">${c.ins}</p><p class="muted" style="font-size:.9rem;margin-top:6px;color:var(--muted)">מה סבא וסבתא לומדים כאן: ${c.gp}</p></div>
+</div>
+<h2>מה לומדים</h2><div class="vals">${c.val.map(v=>`<span>${v}</span>`).join('')}</div>
+<p style="margin-top:10px"><b>איפה זה בחיים:</b> ${c.life}</p>
+<h2>פעילויות מוצעות</h2>${ageBar()}
+${as.map(a=>{const ok=ageFits(a,st.age);return ok?actRow(a):''}).join('')||'<p class="muted">אין פעילות בקטגוריה זו לגיל שנבחר.</p>'}
+${st.age>=0&&as.some(a=>!ageFits(a,st.age))?`<p style="font-size:.85rem;color:var(--muted)">חלק מהפעילויות מוסתרות כי אינן מתאימות לגיל ${AGES[st.age]}.</p>`:''}
+<p style="font-size:.82rem;color:var(--muted);margin-top:16px">נשען על הצעות של: ${c.src.join(', ')}.</p>
+${pagerList(CATS,'c-',c.id)}`;};});
+
+ACTS.forEach(a=>{V['a-'+a.id]=()=>{const c=CX[a.c],ci=CATS.indexOf(c);let n={};try{n=JSON.parse(ls.get('gm-n-'+a.id)||'{}')}catch(e){}
+ return `<p class="eyebrow"><a href="#c-${c.id}" style="text-decoration:none">${ci+1}. ${c.n}</a></p>
+<h1>${a.n}</h1>
+<div class="facts">${tlabel(a.t)}<span>גיל: <b>${a.age}</b></span><span>משך: <b>${a.min}${/[א-ת]/.test(a.min)?'':' דקות'}</b></span></div>
+<p style="margin-top:10px"><b>ציוד:</b> ${a.mat}</p>
+${a.t==='s'?`<p class="muted" style="color:var(--muted);font-size:.92rem">פעילות יחידנית: הנכד/ה מתנסה לבד, ומביא/ה את התוצר לשלב ההתבוננות במפגש הבא.</p>`:''}
+<div class="stages">
+ <div class="stage"><span class="n">1</span><div><h3>פתיחה</h3><p class="hint">מה נעשה היום ומה נלמד ממנו</p><p>${a.open}</p><p style="font-size:.9rem;color:var(--muted)">המיומנות: ${c.skill}</p></div></div>
+ <div class="stage"><span class="n">2</span><div><h3>עשייה</h3><p class="hint">פעילות מוחשית, משחק או יצירה</p><ol>${a.do.map(d=>`<li>${d}</li>`).join('')}</ol>${a.safe?`<div class="safe"><b>בטיחות.</b> ${a.safe}</div>`:''}</div></div>
+ <div class="stage"><span class="n">3</span><div><h3>התבוננות ותובנה משותפת</h3><p class="hint">שאלות רפלקציה${a.t==='s'?', במפגש הבא':''}</p><ul class="rq">${STAGE_Q.map(q=>`<li>${q}</li>`).join('')}</ul><div class="own">${a.q}</div><p style="margin-top:10px"><b>התובנה המשותפת:</b> ${c.ins}</p></div></div>
+</div>
+<h2>התאמות לגילאים</h2>${ageBar()}
+<div class="ages">${AGES.map((g,i)=>`<div class="${st.age<0?'':st.age===i?'on':'off'}"><b>${g}</b>${a.ad[i]}</div>`).join('')}</div>
+<h2>מה לומדים</h2><div class="vals">${c.val.map(v=>`<span>${v}</span>`).join('')}</div>
+<div class="found noprint"><h3>היומן שלנו</h3><p style="font-size:.85rem;color:var(--muted);margin:2px 0 0">נשמר רק בדפדפן הזה, במכשיר הזה.</p>
+<div class="notes"><div><label for="nf">מה גילינו יחד?</label><textarea id="nf" data-k="f">${(n.f||'').replace(/</g,'&lt;')}</textarea></div>
+<div><label for="nl">ניסינו גם בחיים?</label><textarea id="nl" data-k="l" placeholder="חוזרים לכאן אחרי כמה ימים: איפה העיקרון עזר מחוץ לפעילות?">${(n.l||'').replace(/</g,'&lt;')}</textarea></div></div><span class="saved" id="saved"></span></div>
+<div class="toolbar noprint"><button class="btn" type="button" onclick="print()">הדפסת כרטיס הפעילות</button></div>
+<p style="font-size:.82rem;color:var(--muted);margin-top:14px">נשען על הצעות של: ${a.src.join(', ')}.</p>
+${pagerAct(a)}`;};});
+
+V.all=()=>{const L=ACTS.filter(a=>(!st.fc||a.c===st.fc)&&(!st.ft||a.t===st.ft)&&ageFits(a,st.age));
+ return `<p class="eyebrow">אינדקס</p><h1>כל הפעילויות</h1><p class="lead">${ACTS.length} פעילויות ב־${CATS.length} קטגוריות. סננו לפי קטגוריה, סוג וגיל.</p>
+<div class="toolbar"><span class="lbl">קטגוריה:</span><button type="button" class="chip" data-fc="" aria-pressed="${!st.fc}">הכול</button>${CATS.map((c,i)=>`<button type="button" class="chip" data-fc="${c.id}" aria-pressed="${st.fc===c.id}">${i+1}. ${c.n}</button>`).join('')}</div>
+<div class="toolbar"><span class="lbl">סוג:</span><button type="button" class="chip" data-ft="" aria-pressed="${!st.ft}">הכול</button><button type="button" class="chip" data-ft="j" aria-pressed="${st.ft==='j'}">משותפת</button><button type="button" class="chip" data-ft="s" aria-pressed="${st.ft==='s'}">יחידנית</button></div>
+${ageBar()}
+<p style="margin-top:14px;font-weight:700">${L.length} פעילויות מתאימות</p>
+${L.map(actRow).join('')}
+${pager('all')}`;};
+
+V.sources=()=>`<p class="eyebrow">מקורות</p><h1>מאיפה הגיעו ההצעות</h1>
+<p class="lead">הדף מאחד הצעות של שישה בוטים מבוססי AI, שקיבלו את אותה שאלה ואת שתי הדוגמאות שלך. קטגוריות שחזרו אצל כמה בוטים אוחדו, והפעילויות נבחרו כך שבכל קטגוריה יהיו שתי פעילויות משותפות ופעילות יחידנית אחת.</p>
+<div class="tablewrap"><table><thead><tr><th>מקור</th><th>מה הביא</th><th>קטגוריות בדף שנשענות עליו</th></tr></thead><tbody>
+${Object.entries(BOTS).map(([b,d])=>`<tr><td><b>${b}</b></td><td>${d}</td><td>${CATS.filter(c=>c.src.includes(b)).length}</td></tr>`).join('')}
+</tbody></table></div>
+<h2>מה נוסף בעיבוד</h2><ul>
+<li>לכל פעילות נכתבו שלושת השלבים (פתיחה, עשייה, התבוננות) ושלוש התאמות לגילאים, לפי המבנה שהציעו Perplexity ו־DeepSeek.</li>
+<li>השדות "מה גילינו יחד?" ו"ניסינו גם בחיים?" הם הצעה של ChatGPT.</li>
+<li>"מה סבא וסבתא לומדים כאן" מבוסס על ההצעה של ChatGPT לחניכה הדדית.</li></ul>
+${pager('sources')}`;
+
+const ORDER=['home','method','all','sources'];
+const TITLE={home:'פתיחה',method:'איך עובדים',all:'כל הפעילויות',sources:'מקורות'};
+function pager(k){const i=ORDER.indexOf(k),p=ORDER[i-1],n=ORDER[i+1];
+ if(k==='method')return `<div class="pager"><a class="btn" href="#home"><small>הקודם</small>→ פתיחה</a><a class="btn" href="#c-${CATS[0].id}"><small>הבא</small>${CATS[0].n} ←</a></div>`;
+ return `<div class="pager">${p?`<a class="btn" href="#${p}"><small>הקודם</small>→ ${TITLE[p]}</a>`:'<span></span>'}${n?`<a class="btn" href="#${n}"><small>הבא</small>${TITLE[n]} ←</a>`:`<a class="btn" href="#home"><small>חזרה</small>פתיחה ←</a>`}</div>`;}
+function pagerList(L,pre,id){const i=L.findIndex(x=>x.id===id),p=L[i-1],n=L[i+1];
+ return `<div class="pager">${p?`<a class="btn" href="#${pre+p.id}"><small>הקטגוריה הקודמת</small>→ ${p.n}</a>`:`<a class="btn" href="#method"><small>הקודם</small>→ איך עובדים</a>`}${n?`<a class="btn" href="#${pre+n.id}"><small>הקטגוריה הבאה</small>${n.n} ←</a>`:`<a class="btn" href="#all"><small>הבא</small>כל הפעילויות ←</a>`}</div>`;}
+function pagerAct(a){const L=actsOf(a.c),i=L.indexOf(a),p=L[i-1],n=L[i+1];
+ return `<div class="pager">${p?`<a class="btn" href="#a-${p.id}"><small>הפעילות הקודמת</small>→ ${p.n}</a>`:`<a class="btn" href="#c-${a.c}"><small>חזרה לקטגוריה</small>→ ${CX[a.c].n}</a>`}${n?`<a class="btn" href="#a-${n.id}"><small>הפעילות הבאה</small>${n.n} ←</a>`:`<a class="btn" href="#c-${a.c}"><small>חזרה לקטגוריה</small>${CX[a.c].n} ←</a>`}</div>`;}
+
+const nav=document.getElementById('navlist');
+nav.innerHTML=`<li><a href="#home"><span class="code">◎</span>פתיחה</a></li><li><a href="#method"><span class="code">⟳</span>איך עובדים</a></li>
+<li class="navgroup">קטגוריות</li>${CATS.map((c,i)=>`<li><a href="#c-${c.id}"><span class="code">${i+1}</span>${c.n}</a></li>`).join('')}
+<li class="navgroup">עוד</li><li><a href="#all"><span class="code">☰</span>כל הפעילויות</a></li><li><a href="#sources"><span class="code">§</span>מקורות</a></li>`;
+
+const view=document.getElementById('view');
+function route(scroll=true){
+ let h=(location.hash||'#home').slice(1);if(!V[h])h='home';
+ view.innerHTML=V[h]();document.title=(h==='home'?'':(view.querySelector('h1')?.textContent+' · '))+'מיומנויות קטנות לחיים גדולים';
+ const cur=h.startsWith('a-')?'c-'+AX[h.slice(2)].c:h;
+ nav.querySelectorAll('a').forEach(a=>a.getAttribute('href')==='#'+cur?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
+ view.querySelectorAll('[data-age]').forEach(b=>b.addEventListener('click',()=>{st.age=+b.dataset.age;ls.set('gm-age',st.age);route(false);}));
+ view.querySelectorAll('[data-fc]').forEach(b=>b.addEventListener('click',()=>{st.fc=b.dataset.fc;route(false);}));
+ view.querySelectorAll('[data-ft]').forEach(b=>b.addEventListener('click',()=>{st.ft=b.dataset.ft;route(false);}));
+ if(h.startsWith('a-')){const id=h.slice(2),sv=document.getElementById('saved');let tm;
+  view.querySelectorAll('textarea').forEach(t=>t.addEventListener('input',()=>{clearTimeout(tm);tm=setTimeout(()=>{const o={};view.querySelectorAll('textarea').forEach(x=>o[x.dataset.k]=x.value);ls.set('gm-n-'+id,JSON.stringify(o));sv.textContent='נשמר';},400);}));}
+ if(scroll){view.focus({preventScroll:true});if(location.hash)view.scrollIntoView({block:'start'});}
+}
+const tg=document.getElementById('navtoggle');
+tg.addEventListener('click',()=>{const open=nav.classList.toggle('closed')===false;tg.setAttribute('aria-expanded',open);tg.textContent=open?'הסתר את תוכן העניינים':'הצג את תוכן העניינים';});
+nav.addEventListener('click',e=>{if(e.target.closest('a')&&innerWidth<=880){nav.classList.add('closed');tg.setAttribute('aria-expanded','false');tg.textContent='הצג את תוכן העניינים';}});
+document.documentElement.dir='rtl';document.documentElement.lang='he';
+addEventListener('hashchange',()=>route());route(false);
+</script>
+
+</body>
+</html>
