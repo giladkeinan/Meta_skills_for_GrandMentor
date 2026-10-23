@@ -744,6 +744,64 @@
             border-radius: 6px
         }
 
+        .vids {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+            margin-top: 8px
+        }
+
+        @media (max-width: 700px) {
+            .vids {
+                grid-template-columns: minmax(0, 1fr)
+            }
+        }
+
+        .vid {
+            margin: 0;
+            border: 1px solid var(--line);
+            border-radius: var(--r);
+            overflow: hidden;
+            background: var(--sheet);
+            min-width: 0
+        }
+
+        .vid .frame {
+            position: relative;
+            aspect-ratio: 16 / 9;
+            background: var(--soft)
+        }
+
+        .vid iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: 0
+        }
+
+        .vid figcaption {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 4px 12px;
+            padding: 10px 14px;
+            font-size: .95rem
+        }
+
+        .vid figcaption span {
+            font-weight: 600
+        }
+
+        .vid figcaption a {
+            font-size: .88rem;
+            white-space: nowrap
+        }
+
+        .badge.v {
+            color: var(--accent)
+        }
+
         @media print {
 
             nav.index,
@@ -792,6 +850,136 @@
         וליכולת.</footer>
 
     <script>
+        /* ===================== סרטונים לפעילויות =====================
+           לכל פעילות אפשר להוסיף סרטון אחד או יותר.
+           כל סרטון הוא שורה אחת עם שני שדות:
+             t: טקסט קצר שמתאר את הסרטון
+             u: הקישור ליוטיוב. כל צורה מתאימה:
+                https://www.youtube.com/watch?v=XXXXXXXXXXX
+                https://youtu.be/XXXXXXXXXXX
+                https://www.youtube.com/shorts/XXXXXXXXXXX
+           סרטון ש־u שלו ריק לא יוצג, כך שאפשר להשאיר את השורות הריקות.
+           כדי להוסיף עוד סרטון לאותה פעילות, מעתיקים את השורה {t: '', u: ''},
+           (כולל הפסיק שבסופה) ומדביקים אותה מתחתיה.
+           דוגמה:
+            'free-hand': [ // יד עובדת, יד בשמירה
+                {t: 'סבא ונכדה מכינים סלט עם תחנת עגינה', u: 'https://youtu.be/XXXXXXXXXXX'},
+                {t: 'איך מסמנים תחנת עגינה על השולחן', u: 'https://www.youtube.com/watch?v=XXXXXXXXXXX'},
+            ],
+           ================================================================ */
+        const VIDEOS = {
+            // ── 1. ידיים חכמות וכוננות ──
+            'free-hand': [ // יד עובדת, יד בשמירה
+                {t: '', u: ''},
+            ],
+            'clean-station': [ // תחנת פירוק נקייה
+                {t: '', u: ''},
+            ],
+            'my-desk': [ // פינת העבודה שלי
+                {t: '', u: ''},
+            ],
+            // ── 2. האטה והתבוננות ──
+            'draw-twice': [ // ציור פעמיים
+                {t: '', u: ''},
+            ],
+            'nature-silence': [ // שתי דקות של שקט בטבע
+                {t: '', u: ''},
+            ],
+            'what-changed': [ // מה השתנה מאז אתמול?
+                {t: '', u: ''},
+            ],
+            // ── 3. חשיבה על הפעולה והפקת לקחים ──
+            'replay': [ // הילוך חוזר במשחק
+                {t: '', u: ''},
+            ],
+            'lessons-book': [ // פנקס הלקחים המשפחתי
+                {t: '', u: ''},
+            ],
+            'my-routine': [ // הדרך שלי לעשות את זה
+                {t: '', u: ''},
+            ],
+            // ── 4. תכנון, סדר וחשיבה קדימה ──
+            'kitchen-class': [ // המטבח ככיתה
+                {t: '', u: ''},
+            ],
+            'plan-b': [ // יום כיף עם תוכנית ב'
+                {t: '', u: ''},
+            ],
+            'depends': [ // מה תלוי במה?
+                {t: '', u: ''},
+            ],
+            // ── 5. פתרון בעיות וחשיבה יצירתית ──
+            'paper-plane': [ // מטוס נייר: משנים רק דבר אחד
+                {t: '', u: ''},
+            ],
+            'ten-items': [ // גשר מעשרה פריטים
+                {t: '', u: ''},
+            ],
+            'broken-toy': [ // הצעצוע שלא עובד
+                {t: '', u: ''},
+            ],
+            // ── 6. בטיחות, בדיקה וסימנים מוקדמים ──
+            'obstacles': [ // מסלול המכשולים הבטוח
+                {t: '', u: ''},
+            ],
+            'test-bridge': [ // בודקים לפני שסומכים
+                {t: '', u: ''},
+            ],
+            'early-signs': [ // יומן הסימנים המוקדמים
+                {t: '', u: ''},
+            ],
+            // ── 7. תקשורת והקשבה ──
+            'three-seconds': [ // חוק שלוש השניות
+                {t: '', u: ''},
+            ],
+            'draw-by-words': [ // צייר לפי ההסבר שלי
+                {t: '', u: ''},
+            ],
+            'listen-interview': [ // להקשיב יותר מלדבר
+                {t: '', u: ''},
+            ],
+            // ── 8. שיתוף פעולה ומנהיגות הדדית ──
+            'two-roles': [ // אחד מחזיק, אחד מבצע
+                {t: '', u: ''},
+            ],
+            'hints-only': [ // עוזרים רק ברמזים
+                {t: '', u: ''},
+            ],
+            'i-teach': [ // אני מלמד/ת את סבא וסבתא
+                {t: '', u: ''},
+            ],
+            // ── 9. ויסות רגשי, סבלנות והתמדה ──
+            'mood-meter': [ // מד הרגש ושלוש נשימות
+                {t: '', u: ''},
+            ],
+            'hard-story': [ // הסיפור של הקושי
+                {t: '', u: ''},
+            ],
+            'next-step': [ // הצעד הקטן הבא
+                {t: '', u: ''},
+            ],
+            // ── 10. אחריות ועצמאות ──
+            'full-meal': [ // ארוחה מההתחלה ועד הסוף
+                {t: '', u: ''},
+            ],
+            'less-waste': [ // פחות בזבוז, יותר תועלת
+                {t: '', u: ''},
+            ],
+            'my-bag': [ // התיק שאני הכנתי
+                {t: '', u: ''},
+            ],
+            // ── 11. זיכרון, סיפור וזהות משפחתית ──
+            'interview': [ // ראיון הדדי
+                {t: '', u: ''},
+            ],
+            'recipe-story': [ // המתכון של סבתא (או של סבא)
+                {t: '', u: ''},
+            ],
+            'object-story': [ // חפץ עם סיפור
+                {t: '', u: ''},
+            ],
+        };
+
         const CATS = [
             {
                 id: 'hands', n: 'ידיים חכמות וכוננות', tag: 'יד פנויה היא יד מוכנה',
@@ -1180,7 +1368,30 @@
         const tlabel = t => t === 'j' ? '<span class="badge j">משותפת</span>' : '<span class="badge s">יחידנית</span>';
         const ageFits = (a, i) => {if (i < 0) return true; const [lo, hi] = a.age.split('–').map(Number), [blo, bhi] = AGES[i].split('–').map(Number); return lo <= bhi && hi >= blo;};
         function ageBar() {return `<div class="toolbar noprint"><span class="lbl">גיל הנכד/ה:</span><button type="button" class="chip" data-age="-1" aria-pressed="${st.age < 0}">כל הגילאים</button>${AGES.map((g, i) => `<button type="button" class="chip" data-age="${i}" aria-pressed="${st.age === i}">${g}</button>`).join('')}</div>`;}
-        const actRow = a => `<a class="act" href="#a-${a.id}"><span><span class="nm">${a.n}</span> ${tlabel(a.t)}</span><span class="go">←</span><span class="sub">${CX[a.c].n} · גיל ${a.age} · ${a.min}${/[א-ת]/.test(a.min) ? '' : ' דקות'}</span></a>`;
+        const actRow = a => `<a class="act" href="#a-${a.id}"><span><span class="nm">${a.n}</span> ${tlabel(a.t)}${vcount(a)}</span><span class="go">←</span><span class="sub">${CX[a.c].n} · גיל ${a.age} · ${a.min}${/[א-ת]/.test(a.min) ? '' : ' דקות'}</span></a>`;
+
+        /* סרטונים: זיהוי מזהה הסרטון, ובניית אזור הסרטונים בדף הפעילות */
+        const esc = x => String(x || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+        const vidsOf = a => (VIDEOS[a.id] || []).filter(v => v && v.u && v.u.trim());
+        function ytId(u) {
+            try {
+                const x = new URL(u.trim());
+                if (/youtu\.be$/.test(x.hostname)) return x.pathname.slice(1).split('/')[0];
+                if (/youtube(-nocookie)?\.com$/.test(x.hostname)) {
+                    if (x.searchParams.get('v')) return x.searchParams.get('v');
+                    const m = x.pathname.match(/\/(shorts|embed|live)\/([\w-]{6,})/); if (m) return m[2];
+                }
+            } catch (e) { }
+            return null;
+        }
+        function vidsBlock(a) {
+            const L = vidsOf(a); if (!L.length) return '';
+            return `<h2>סרטונים</h2><div class="vids">${L.map(v => {
+                const id = ytId(v.u), t = esc(v.t) || 'סרטון', href = esc(v.u.trim());
+                return `<figure class="vid">${id ? `<div class="frame noprint"><iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(id)}" title="${t}" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div>` : ''}<figcaption><span>${t}</span><a href="${href}" target="_blank" rel="noopener">לצפייה ביוטיוב ↗</a></figcaption></figure>`;
+            }).join('')}</div>`;
+        }
+        const vcount = a => {const k = vidsOf(a).length; return k ? ` <span class="badge v" title="סרטונים">▶ ${k}</span>` : '';};
 
         const V = {};
         V.home = () => `<p class="eyebrow">GrandMentor · חניכה בין־דורית</p>
@@ -1258,6 +1469,7 @@ ${a.t === 's' ? `<p class="muted" style="color:var(--muted);font-size:.92rem">פ
  <div class="stage"><span class="n">2</span><div><h3>עשייה</h3><p class="hint">פעילות מוחשית, משחק או יצירה</p><ol>${a.do.map(d => `<li>${d}</li>`).join('')}</ol>${a.safe ? `<div class="safe"><b>בטיחות.</b> ${a.safe}</div>` : ''}</div></div>
  <div class="stage"><span class="n">3</span><div><h3>התבוננות ותובנה משותפת</h3><p class="hint">שאלות רפלקציה${a.t === 's' ? ', במפגש הבא' : ''}</p><ul class="rq">${STAGE_Q.map(q => `<li>${q}</li>`).join('')}</ul><div class="own">${a.q}</div><p style="margin-top:10px"><b>התובנה המשותפת:</b> ${c.ins}</p></div></div>
 </div>
+${vidsBlock(a)}
 <h2>התאמות לגילאים</h2>${ageBar()}
 <div class="ages">${AGES.map((g, i) => `<div class="${st.age < 0 ? '' : st.age === i ? 'on' : 'off'}"><b>${g}</b>${a.ad[i]}</div>`).join('')}</div>
 <h2>מה לומדים</h2><div class="vals">${c.val.map(v => `<span>${v}</span>`).join('')}</div>
